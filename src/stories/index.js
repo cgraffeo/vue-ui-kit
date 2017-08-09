@@ -6,6 +6,12 @@ import { linkTo } from '@storybook/addon-links';
 
 import MyButton from './MyButton.vue';
 import Welcome from './Welcome.vue';
+import MGLGallery from './MGLGallery.vue';
+import SliderGallery from './SliderGallery.vue';
+import StaticMessage from './Message.vue';
+import InputMessage from './InputMessage.vue';
+import ConditionalBTNMSG from './ConditionalBTNMSG.vue';
+import CNDTLTextInputs from './CNDTLTextInputs.vue';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
@@ -24,3 +30,31 @@ storiesOf('Button', module)
     template: '<my-button @click="action">😀 😎 👍 💯</my-button>',
     methods: { action: action('clicked') },
   }));
+
+storiesOf('Gallery', module)
+  .add('Multiple grid list', () => ({
+    components: { MGLGallery },
+    template:'<MGLGallery></MGLGallery>',
+  }))
+  .add('Slidier image gallery', () => ({
+    components: { SliderGallery },
+    template: '<slider-gallery></slider-gallery>'
+  }))
+
+storiesOf('Messages', module)
+  .add('Static Message in Data Object', () => ({
+    components: { StaticMessage },
+    template: '<static-message></static-message>'
+  }))
+  .add('Messages with input', () => ({
+    components: { InputMessage },
+    template: '<input-message></input-message>'
+  }))
+  .add('Message with conditional button', () => ({
+    components: { ConditionalBTNMSG },
+    template: '<ConditionalBTNMSG></ConditionalBTNMSG>'
+  }))
+  .add('Message with conditional text', () => ({
+    components: { CNDTLTextInputs },
+    template: '<CNDTLTextInputs></CNDTLTextInputs>'
+  }))
