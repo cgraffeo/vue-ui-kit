@@ -12,6 +12,7 @@ import StaticMessage from './Message.vue';
 import InputMessage from './InputMessage.vue';
 import ConditionalBTNMSG from './ConditionalBTNMSG.vue';
 import CNDTLTextInputs from './CNDTLTextInputs.vue';
+import StaticMultiplication from './MultiplicationTable.vue';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
@@ -57,4 +58,10 @@ storiesOf('Messages', module)
   .add('Message with conditional text', () => ({
     components: { CNDTLTextInputs },
     template: '<CNDTLTextInputs></CNDTLTextInputs>'
+  }))
+
+storiesOf('Array Rendering', module)
+  .add('Static Multiplication Table', () =>({
+    components: { StaticMultiplication },
+    template: '<StaticMultiplication></StaticMultiplication>'
   }))
