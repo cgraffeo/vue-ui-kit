@@ -14,6 +14,8 @@ import ConditionalBTNMSG from './ConditionalBTNMSG.vue';
 import CNDTLTextInputs from './CNDTLTextInputs.vue';
 import ArrayOfObjectsIdx from './ArrayOfObjects.vue';
 import UpvoteBtn from './UpvoteBtn.vue';
+import Calculator from './Calculator.vue';
+import ComputedCalc from './ComputedCalc.vue';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
@@ -71,4 +73,12 @@ storiesOf('Event Handlers', module)
   .add('Upvote button', () => ({
     components: { UpvoteBtn },
     template: '<UpvoteBtn></UpvoteBtn>'
+  }))
+  .add('Calculator', () => ({
+    components: { Calculator },
+    template: '<Calculator></Calculator>'
+  }))
+  .add('Calculator with computed properties', () => ({
+    components: { ComputedCalc },
+    template: '<ComputedCalc></ComputedCalc>'
   }))
