@@ -16,7 +16,7 @@ import ArrayOfObjectsIdx from './ArrayOfObjects.vue';
 import UpvoteBtn from './UpvoteBtn.vue';
 import Calculator from './Calculator.vue';
 import ComputedCalc from './ComputedCalc.vue';
-
+import Voter from './Voter.vue'
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
   template: '<welcome :showApp="action" />',
@@ -81,4 +81,8 @@ storiesOf('Event Handlers', module)
   .add('Calculator with computed properties', () => ({
     components: { ComputedCalc },
     template: '<ComputedCalc></ComputedCalc>'
+  }))
+  .add('Voter Platform', () => ({
+    components: { Voter },
+    template: '<Voter></Voter>'
   }))
