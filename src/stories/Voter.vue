@@ -4,10 +4,10 @@
       <li v-for="user in users" class="list-group-item">
         {{user.name}} has {{user.votes}}
        <button @click.prevent="user.votes++"> Vote! </button>
-      <button class="btn-warn" @click.prvent="clear">RESET</button>
       </li>
     </ul>
-    <h2> Our mayor is {{mayor.name}}!</h2>
+    <input @keyup.delete="clear" class="form-control" placeholder="press 'delete' to reset "></input>
+    <h2> Our mayor is {{mayor.name}} with {{mayor.votes}} votes!</h2>
   </div>
 </template>
 <script>
@@ -35,7 +35,8 @@
           return b.votes - a.votes;
         });
         return candidatesSorted[0];
-      },
+      }
+    },
     methods: {
       clear: function () {
         this.users = this.users.map(function (user) {
@@ -45,5 +46,4 @@
       }
     }
     }
-  };
 </script>
