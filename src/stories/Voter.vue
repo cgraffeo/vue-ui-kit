@@ -2,7 +2,7 @@
   <div class="container">
     <ul class="list-group">
       <li v-for="user in users" class="list-group-item">
-        {{user}} has {{currentVote}}
+        {{user.name}} has {{user.votes}}
        <button @click.prevent="upvote"> Vote! </button>
       </li>
     </ul>
@@ -14,16 +14,16 @@
     data () {
       return{
         users: [
-          'bob',
-          'joe',
-          'bill'
-        ],
-        currentVote: 0
+          {name: 'bob',
+            votes: 0},
+          {name: 'joe',
+          votes: 0}
+        ]
       }
     },
     methods: {
       upvote: function (){
-        this.currentVote++;
+        this.user.votes++;
       }
       }
     }
