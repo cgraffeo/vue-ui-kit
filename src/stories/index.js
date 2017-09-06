@@ -17,6 +17,7 @@ import UpvoteBtn from './UpvoteBtn.vue';
 import Calculator from './Calculator.vue';
 import ComputedCalc from './ComputedCalc.vue';
 import Voter from './Voter.vue'
+import FilterArrayOO from './FilterArrayOO.vue'
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
   template: '<welcome :showApp="action" />',
@@ -67,6 +68,10 @@ storiesOf('Array Rendering', module)
   .add('Array of Objects with index', () =>({
     components: { ArrayOfObjectsIdx },
     template: '<ArrayOfObjectsIdx></ArrayOfObjectsIdx>'
+  }))
+  .add('Filter Array Of Objects', () => ({
+    components: { FilterArrayOO },
+    template: '<FilterArrayOO></FilterArrayOO>'
   }))
 
 storiesOf('Event Handlers', module)
