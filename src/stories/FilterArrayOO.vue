@@ -4,13 +4,13 @@
     <div>
       <h3>Alex's Stories</h3>
       <ul class="list-group">
-        <li v-for="story in sotriesBy('Alex')" class="list-group-item">
+        <li v-for="story in storiesBy('Alex')" class="list-group-item">
           {{ story.writer }} said "{{ story.plot }}"
         </li>
       </ul>
       <h3>John's Stories</h3>
       <ul class="list-group">
-        <li v-for="story in sotriesBy('John')" class="list-group-item">
+        <li v-for="story in storiesBy('John')" class="list-group-item">
           {{ story.writer }} said "{{ story.plot }}"
         </li>
       </ul>
@@ -43,7 +43,7 @@
       }
     },
     methods: {
-      storiesBy : function (writer) {
+      storiesBy: function (writer) {
         return this.stories.filter(function (story) {
           return story.writer === writer
         })
