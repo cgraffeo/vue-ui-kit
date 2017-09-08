@@ -3,6 +3,7 @@
 import { storiesOf } from '@storybook/vue';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
+import Vue from 'vue';
 
 import MyButton from './MyButton.vue';
 import Welcome from './Welcome.vue';
@@ -16,8 +17,14 @@ import ArrayOfObjectsIdx from './ArrayOfObjects.vue';
 import UpvoteBtn from './UpvoteBtn.vue';
 import Calculator from './Calculator.vue';
 import ComputedCalc from './ComputedCalc.vue';
-import Voter from './Voter.vue'
-import FilterArrayOO from './FilterArrayOO.vue'
+import Voter from './Voter.vue';
+import FilterArrayOO from './FilterArrayOO.vue';
+import ComputedFilterArrayOO from './ComputedFilterArrayOO.vue';
+import SearchFilterAOO from './SearchFilterAOO.vue';
+import OrderedResultsAOO from './OrderedResultsAOO.vue';
+import CustomArrayFilter from './CustomArrayFilter.vue';
+import CustomFilterArrayOO from './CustomFilterArrayOO.vue';
+
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
   template: '<welcome :showApp="action" />',
@@ -72,6 +79,26 @@ storiesOf('Array Rendering', module)
   .add('Filter Array Of Objects', () => ({
     components: { FilterArrayOO },
     template: '<FilterArrayOO></FilterArrayOO>'
+  }))
+  .add('Computed Filter Array Of Objects', () => ({
+    components: { ComputedFilterArrayOO },
+    template: '<ComputedFilterArrayOO></ComputedFilterArrayOO>'
+  }))
+  .add('Searchable Filter Array Of Objects', () => ({
+    components: { SearchFilterAOO },
+    template: '<SearchFilterAOO></SearchFilterAOO>'
+  }))
+  .add('Ordered Results Array Of Objects', () => ({
+    components: { OrderedResultsAOO },
+    template: '<OrderedResultsAOO></OrderedResultsAOO>'
+  }))
+  .add('Custom Array Filter', () => ({
+    components: { CustomArrayFilter },
+    template: '<CustomArrayFilter></CustomArrayFilter>'
+  }))
+  .add('Custom Array Story Filter', () => ({
+    components: { CustomFilterArrayOO },
+    template: '<CustomFilterArrayOO></CustomFilterArrayOO>'
   }))
 
 storiesOf('Event Handlers', module)
