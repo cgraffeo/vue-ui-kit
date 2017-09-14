@@ -11,11 +11,13 @@
 <script>
   export default {
     name: 'CustomArrayFilter',
-    // Vue.filter('snitch', function (hero) {
-    //   return hero.secretId + ' is '
-    //   + hero.firstname + ' '
-    //   + hero.lastname + ' in real life!'
-    // }),
+    filters: {
+      snitch (hero){
+        return hero.secretId + ' is '
+        + hero.firstname + ' '
+        + hero.lastname + ' in real life!'
+      }
+    },
     data() {
       return {
         heroes: [

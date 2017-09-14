@@ -24,6 +24,8 @@ import SearchFilterAOO from './SearchFilterAOO.vue';
 import OrderedResultsAOO from './OrderedResultsAOO.vue';
 import CustomArrayFilter from './CustomArrayFilter.vue';
 import CustomFilterArrayOO from './CustomFilterArrayOO.vue';
+import FilteredPeople from './FilteredPeople.vue';
+import StoryWithComponents from './StoryWithComponents.vue';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
@@ -100,6 +102,10 @@ storiesOf('Array Rendering', module)
     components: { CustomFilterArrayOO },
     template: '<CustomFilterArrayOO></CustomFilterArrayOO>'
   }))
+  .add('Filtered Array of Objects by Age', () => ({
+    components: { FilteredPeople },
+    template: '<FilteredPeople></FilteredPeople>'
+  }))
 
 storiesOf('Event Handlers', module)
   .add('Upvote button', () => ({
@@ -117,4 +123,10 @@ storiesOf('Event Handlers', module)
   .add('Voter Platform', () => ({
     components: { Voter },
     template: '<Voter></Voter>'
+  }))
+
+storiesOf('HTML With Components', module)
+  .add('Voting on Story With Components', () => ({
+    components: { StoryWithComponents },
+    template: '<StoryWithComponents></StoryWithComponents>'
   }))
