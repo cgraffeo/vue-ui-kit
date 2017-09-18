@@ -1,59 +1,62 @@
-<template>
-  <div class="container">
-    <h1> Let's hear some stories!</h1>
-    <ul class="list-group">
-      <story v-for="story in stories" :story="story"></story>
+<!--   <div id="main">
+    <div class="container">
+      <h1>Where would like to go?</h1>
+      <ul class="list-group">
+        <planet v-for="planet in planets" :planet="planet"></planet>
     </ul>
   </div>
-</template>
-<template id="story-template">
-  <li class="list-group-item">
-    {{ story.writer }} said "{{ story.plot }}"
-    Story upvotes {{ story.upvotes }}.
-    <button v-show="!story.voted" @click="upvote" class="btn btn-default">
-      Upvote
+</div>
+<template id="planet-template">
+  <li  class="list-group-item">
+    Planet: {{ planet.name }}
+    Visited {{ planet.visits }} time(s).
+    <button v-show="canBeVisited" @click="visit" class="btn btn-default">
+      Visit
     </button>
-  </li>
+    <span v-show="planet.visits > 0" class="fa fa-rocket fa-2x pull-right" aria-hidden="true">
+</span>
+</li>
 </template>
 <script>
 import Vue from 'vue';
-Vue.component('story', {
-  template: "#story-template",
-  props: ['story'],
+
+Vue.component('planet', {
+  template: "#planet-template",
+  props: ['planet'],
   methods: {
-    upvote: function(){
-      this.story.upvotes += 1;
-      this.story.voted = true;
+    visit: function(){
+      this.planet.visits++;
     },
-  }
-});
-  export default {
-    name: 'StoryWithComponents',
-    data(){
-      return{
-        stories: [
-          {
-            writer: 'Mr. Weebl',
-            story: 'My horse is amazing.',
-            voted: false
-          },
-          {
-            writer: 'Mr. Weebl',
-            story: 'Narwhals invented Shish Kebab.',
-            voted: false
-          },
-          {
-            writer: 'Darth Vader',
-            story: 'The dar side of the force is stronger.',
-            voted: false
-          },
-          {
-            writer: 'Boromir',
-            story: 'One does not simple walk into Mordeor.',
-            voted: false
-          },
-        ]
-      }
+  },
+  computed: {
+    canBeVisited: function () {
+      return this.planet.visits < 3
     }
   }
-</script>
+});
+export default {
+  name: 'StoryWithComponents',
+  data (){
+    return {
+      planets: [
+        {
+          name: 'Mercury',
+          visits: 0
+        },
+        {
+          name: 'Venus',
+          visits: 0
+        },
+        {
+          name: 'Mars',
+          visits: 0
+        },
+        {
+          name: 'Jupiter',
+          visits: 0
+        }
+      ]
+    }
+  }
+}
+</script> -->
