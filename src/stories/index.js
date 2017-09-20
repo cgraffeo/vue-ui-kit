@@ -25,7 +25,9 @@ import OrderedResultsAOO from './OrderedResultsAOO.vue';
 import CustomArrayFilter from './CustomArrayFilter.vue';
 import CustomFilterArrayOO from './CustomFilterArrayOO.vue';
 import FilteredPeople from './FilteredPeople.vue';
-// import StoryWithComponents from './StoryWithComponents.vue';
+import StoryWithComponents from './StoryWithComponents.vue';
+import SimpleEmit from './SimpleEmit.vue'
+import PassingArgs from './PassingArgs.vue'
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
@@ -125,8 +127,19 @@ storiesOf('Event Handlers', module)
     template: '<Voter></Voter>'
   }))
 
-// storiesOf('HTML With Components', module)
-//   .add('Voting on Story With Components', () => ({
-//     components: { StoryWithComponents },
-//     template: '<StoryWithComponents></StoryWithComponents>'
-//   }))
+storiesOf('HTML With Components', module)
+  .add('Voting on Story With Components', () => ({
+    components: { StoryWithComponents },
+    template: '<StoryWithComponents></StoryWithComponents>'
+  }))
+
+storiesOf('Emit, Listen, Lifecycle Hooks', module)
+  .add('Simple Emit functionality', () => ({
+    components: { SimpleEmit },
+    template: '<SimpleEmit></SimpleEmit>'
+  }))
+  .add('Passing Args', () => ({
+    template: '<passing-args></passing-args>',
+    components: { PassingArgs }
+  }))
+
