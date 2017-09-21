@@ -26,8 +26,10 @@ import CustomArrayFilter from './CustomArrayFilter.vue';
 import CustomFilterArrayOO from './CustomFilterArrayOO.vue';
 import FilteredPeople from './FilteredPeople.vue';
 import StoryWithComponents from './StoryWithComponents.vue';
-import SimpleEmit from './SimpleEmit.vue'
-import PassingArgs from './PassingArgs.vue'
+import SimpleEmit from './SimpleEmit.vue';
+import PassingArgs from './PassingArgs.vue';
+import Chariot from './Chariot.vue';
+import ToggleDiv from './ToggleDiv.vue';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
@@ -139,7 +141,16 @@ storiesOf('Emit, Listen, Lifecycle Hooks', module)
     template: '<SimpleEmit></SimpleEmit>'
   }))
   .add('Passing Args', () => ({
-    template: '<passing-args></passing-args>',
-    components: { PassingArgs }
+    components: { PassingArgs },
+    template: '<passing-args></passing-args>'
+  }))
+  .add('Chariot', () => ({
+    components: { Chariot },
+    template: '<Chariot></Chariot>'
   }))
 
+storiesOf('Class and Style Binding', module)
+  .add('Basic Binding', () => ({
+    components: { ToggleDiv },
+    template: '<ToggleDiv></ToggleDiv>'
+  }))
