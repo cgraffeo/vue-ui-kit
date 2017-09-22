@@ -30,6 +30,7 @@ import SimpleEmit from './SimpleEmit.vue';
 import PassingArgs from './PassingArgs.vue';
 import Chariot from './Chariot.vue';
 import ToggleDiv from './ToggleDiv.vue';
+import TaskList from './TaskList.vue';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
@@ -153,4 +154,8 @@ storiesOf('Class and Style Binding', module)
   .add('Basic Binding', () => ({
     components: { ToggleDiv },
     template: '<ToggleDiv></ToggleDiv>'
+  }))
+  .add('Task List', () => ({
+    components: { TaskList },
+    template: '<TaskList></TaskList>'
   }))

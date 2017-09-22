@@ -1,5 +1,5 @@
 <template>
-  <div class="conatiner">
+  <div class="conatiner text-center">
     <div class="box" v-bind:class="{ 'red' : color, 'blue' : !color }"></div>
     <div class="box" v-bind:class="{ 'purple' : color, 'green' : !color }"></div>
     <div class="box" v-bind:class="{ 'red' : color, 'blue' : !color }"></div>
