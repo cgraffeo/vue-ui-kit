@@ -31,6 +31,7 @@ import PassingArgs from './PassingArgs.vue';
 import Chariot from './Chariot.vue';
 import ToggleDiv from './ToggleDiv.vue';
 import TaskList from './TaskList.vue';
+import LetsPaint from './LetsPaint.vue';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
@@ -158,4 +159,8 @@ storiesOf('Class and Style Binding', module)
   .add('Task List', () => ({
     components: { TaskList },
     template: '<TaskList></TaskList>'
+  }))
+  .add('Lets Paint!', () => ({
+    components: { LetsPaint },
+    template: '<LetsPaint></LetsPaint>'
   }))
